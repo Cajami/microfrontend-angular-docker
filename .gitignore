@@ -1,0 +1,49 @@
+# Node modules en todos los subproyectos
+**/node_modules/
+**/dist/
+**/.angular/
+**/.cache/
+**/.output/
+**/.turbo/
+
+# IDEs
+**/.vscode/
+**/.idea/
+
+# Logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# Ambiente
+**/.env
+**/.env.*.local
+**/.DS_Store
+
+# Angular build y test outputs
+**/.angular/cache/
+**/coverage/
+
+# Sistema operativo
+**/Thumbs.db
+**/Desktop.ini
+
+# Docker
+**/*.local.yml
+**/.docker/
+**/.env.docker
+
+# Mac
+**/.DS_Store
+
+# Windows
+**/ehthumbs.db
+**/Icon?
+**/Thumbs.db
+
+# Otros
+**/tmp/
+**/temp/
+**/package-lock.json # opcional si usas npm pero lo regeneras
+**/yarn.lock          # opcional si usas yarn pero lo regeneras
