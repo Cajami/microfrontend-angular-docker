@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  root:
+    container_name: root
+    build:
+      context: ./root
+      dockerfile: Dockerfile
+    ports:
+      - "7000:80"
+    depends_on:
+      - mf-ventas
+      - mf-compras
+
+  mf-ventas:
+    container_name: mf-ventas
+    build:
+      context: ./mf-ventas
+      dockerfile: Dockerfile
+    ports:
+      - "5022:80"
+
+  mf-compras:
+    container_name: mf-compras
+    build:
+      context: ./mf-compras
+      dockerfile: Dockerfile
+    ports:
+      - "4046:80"
