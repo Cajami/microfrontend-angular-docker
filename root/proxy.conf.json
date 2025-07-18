@@ -1,0 +1,14 @@
+{
+  "/mf-ventas": {
+    "target": "http://localhost:4201",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/mf-compras": {
+    "target": "http://localhost:4202",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

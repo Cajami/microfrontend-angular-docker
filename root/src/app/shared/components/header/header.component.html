@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">🧩 Microfrontends App</a>
+
+    <div class="collapse navbar-collapse" id="navbarMenus">
+      <ul class="navbar-nav me-auto">
+        <li
+          class="nav-item"
+          [ngClass]="{ active: router.url === '/' }"
+        >
+          <a class="nav-link" routerLink="/">Inicio</a>
+        </li>
+        <li
+          class="nav-item"
+          [ngClass]="{ active: router.url.startsWith('/ventas') }"
+        >
+          <a class="nav-link" routerLink="/ventas">Ventas</a>
+        </li>
+        <li
+          class="nav-item"
+          [ngClass]="{ active: router.url.startsWith('/compras') }"
+        >
+          <a class="nav-link" routerLink="/compras">Compras</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

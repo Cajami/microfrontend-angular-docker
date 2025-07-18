@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h2 class="mb-4">🧾 Listar Ventas</h2>
+
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let venta of ventas">
+      <div class="card h-100 shadow-sm">
+        <img src="mf-ventas/images/{{venta.imagenUrl}}" class="card-img-top img-ejemplo" alt="{{ venta.producto }}" />
+
+        <div class="card-body">
+          <h5 class="card-title">{{ venta.producto }}</h5>
+          <p class="card-text">
+            💰 <strong>S/ {{ venta.total | number:'1.2-2' }}</strong><br>
+            📆 {{ venta.cuotas }} cuotas de S/ {{ venta.montoCuota | number:'1.2-2' }}<br>
+            🗓 {{ venta.fecha | date }}
+          </p>
+
+          <span 
+            class="badge" 
+            [ngClass]="{
+              'bg-success': venta.estado === 'Al día',
+              'bg-warning': venta.estado === 'Atrasado',
+              'bg-secondary': venta.estado === 'Cancelado'
+            }"
+          >
+            {{ venta.estado }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
